@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .box
+        {
+            height: 50px;
+            width: 50px;
+            border: 1px solid black;
+            border-radius: 50%;
+            position: relative;
+            animation-name: ball;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-iteration-count: 10;
+            animation-direction: alternate;
+        }
+        @keyframes ball 
+        {
+            0%
+            {
+                top: 0px;
+                left: 0px;
+                background-color: red;
+            }
+            20%
+            {
+                top: 100px;
+                left: 200px;
+                background-color: aqua;
+            }
+            40%
+            {
+                top: 0px;
+                left: 400px;
+                background-color: white;
+            }
+            60%
+            {
+                top: 100px;
+                left: 600px;
+                background-color: brown;
+            }
+            80%
+            {
+                top: 0px;
+                left: 800px;
+                background-color: green;
+            }
+            100%
+            {
+                top: 100px;
+                left: 1000px;
+                background-color: blue;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+</body>
+</html>

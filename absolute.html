@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .grandparent
+        {
+            height: 300px;
+            width: 300px;
+            background-color: aqua;
+        }
+        .parent
+        {
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            margin-top: 40px;
+        }
+        .child
+        {
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+            position: absolute;
+            top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grandparent">grandparent
+        <div class="parent">parent
+            <div class="child">
+                child
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .box
+        {
+            display: grid;
+            gap: 10px 10px;
+            grid-template-columns: repeat(6,1fr);
+            grid-template-rows: repeat(6,100px);
+            grid-template-areas: 
+            "item1     item1    item2   item2   item3   item3"
+            "item1     item1    item2   item2   item3   item3"
+            "item1     item1    item2   item2   item3   item3"
+            "item1     item1    item4   item4   item5   item5"
+            "item1     item1    item4   item4   item5   item5"
+            "item1     item1    item4   item4   item5   item5";
+        }
+        .box1
+        {
+            margin-top: 20px;
+            display: grid;
+            gap: 10px 10px;
+            grid-template-columns: repeat(6,1fr);
+            grid-template-rows: repeat(6,100px);
+            grid-template-areas: 
+            "item2   item2   item3   item3  item1   item1"
+            "item2   item2   item3   item3  item1   item1"
+            "item2   item2   item3   item3  item1   item1"
+            "item4   item4   item5   item5  item1   item1"
+            "item4   item4   item5   item5  item1   item1"
+            "item4   item4   item5   item5  item1   item1";
+        }
+
+        .item1
+        {
+            background-color: green;
+            grid-area: item1;
+            border-radius: 10px;
+        }
+        .item1:hover
+        {
+            transform: scale(1.1);
+            transition:all 1s ease 4ms;
+        }
+        .item2
+        {
+            grid-area: item2;
+            background-color: red;
+            border-radius: 10px;
+        }
+        .item2:hover
+        {
+            transform: scale(1.1);
+            transition:all 1s ease 4ms;
+        }
+        .item3
+        {
+            grid-area: item3;
+            background-color: yellow;
+            border-radius: 10px;
+        }
+        .item3:hover
+        {
+            transform: scale(1.1);
+            transition:all 1s ease 4ms;
+        }
+        .item4
+        {
+            grid-area: item4;
+            background-color: purple;
+            border-radius: 10px;
+        }
+        .item4:hover
+        {
+            transform: scale(1.1);
+            transition:all 1s ease 4ms;
+        }
+        .item5
+        {
+            grid-area: item5;
+            background-color: pink;
+            border-radius: 10px;
+        }
+        .item5:hover
+        {
+            transform: scale(1.1);
+            transition:all 1s ease 4ms;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="item1">Home1</div>
+        <div class="item2">Home2</div>
+        <div class="item3">Home3</div>
+        <div class="item4">Home4</div>
+        <div class="item5">Home5</div>
+    </div>
+    <div class="box1">
+        <div class="item1">Home1</div>
+        <div class="item2">Home2</div>
+        <div class="item3">Home3</div>
+        <div class="item4">Home4</div>
+        <div class="item5">Home5</div>
+    </div>
+</body>
+</html>
