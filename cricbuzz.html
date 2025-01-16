@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cricbuzz</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body
+        {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgba(128, 128, 128, 0.181);
+        }
+        .section1
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .section1>.nav>.sub2
+        {
+            margin-top: 6px;
+        }
+        .nav,.nav1
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            height: auto;
+            width: 70vw;
+            background-color:rgba(0, 139, 109, 0.901);
+            color: white;
+            padding: 10px 0px;
+        }
+        .sub2>a,.nav1>.sub4>a
+        {
+            text-decoration: none;
+            padding-left: 10px;
+            color: white;
+        }
+        .nav1
+        {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0px;
+            background-color: rgba(0, 0, 0, 0.69);
+        }
+        .boxes
+        {
+            font-size: 10px;
+            display: flex;
+            gap: 15px;
+            flex-direction: row;
+        }
+        .boxes>.box1 
+        {
+            height: auto;
+            width: 257px;
+            color: black;
+            background-color: white;
+            border-radius: 3px;
+            margin-top: 10px;
+            box-shadow: 0px 0px 3px grey;
+        }
+        .boxes>.box1>.match
+        {
+            display: flex;
+            font-size: 11px;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0px 8px;
+            padding-top: 7px;
+        }
+        .boxes>.box1>.time
+        {
+            color: red;
+            font-size: 12px;
+            padding: 5px 8px ;
+        } 
+        .boxes>.box1>.bottom 
+        {
+            display: flex;
+            background-color: rgba(236, 230, 230, 0.726);
+            color: black;
+            flex-direction: row;
+            justify-content: end;
+            border-bottom-right-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+        .boxes>.box1>.bottom >a 
+        {
+            color:grey;
+            font-size: 13px;
+            padding:10px;
+            text-decoration: none;
+        }
+        .boxes>.box1>.bottom >a :hover
+        {
+            text-decoration-line: underline;
+        }
+        .nav3>div>a 
+        {
+            text-decoration: none;
+            color: black;
+            background-color: rgba(128, 128, 128, 0.089);
+            padding: 3px 10px;
+        }
+        .nav3
+        {
+            display: flex;
+            flex-direction: row;
+            background-color: white;
+            margin: 10px 0px;
+            border-radius: 5px;
+            width: 70vw;
+        }
+        .nav3>div
+        {
+            margin: 10px 10px;
+        }
+        .flexboxes>.flexbox1,.flexbox2
+        {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+        }
+        .flexboxes>.flexbox1>.flex1
+        {
+            height: auto;
+            width: 210px ;
+            border: none;
+            padding: 4px 10px;
+            background-color: white;
+            border-bottom: 1px solid grey;
+        }
+        
+        .flexboxes>.flexbox1>.flex1>p:hover
+        {
+            text-decoration-line:underline ;
+        }
+        .flex1>.more:hover
+        {
+            text-decoration-line: underline ;
+            text-decoration-color:  rgb(18, 142, 199);
+        }
+        .flexbox2>.box1
+        {
+            height: auto;
+            width: 30vw;
+            padding-left: 10px;
+            border-bottom: 1px solid grey;
+        }
+        .flexbox2>.box1>div
+        {
+            padding: 7px 0px;
+        }
+        .flexes 
+        {
+            display: flex;
+            flex-direction: row;
+            column-gap: 20px;
+        }
+        .flexbox2>.box1>.text:hover,.flexbox3>.box3>.text:hover
+        {
+            text-decoration-line:underline ;
+        }
+        .flexbox3>.box1
+        {
+            height: auto;
+            width: 22vw;
+            padding-top:10px ;
+        }
+        .flexbox3>.box2 
+        {
+            height: auto;
+            width: 22vw;
+            position: relative;
+        }
+    .flexbox3>.box2>.text:hover
+    {
+        text-decoration-line:underline;
+        text-decoration-color: white;
+    }
+    .flexbox3>.box2>.words 
+    {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        bottom: 5px;
+        color: white;
+        justify-content: space-between;
+    }
+    .flexbox3>.box2>.words>.text>.text1
+    {
+        text-decoration: none;
+        color: white;
+        font-size: 15px;
+    }
+    .flexbox3>.box2>.words>.text:hover
+    {
+        text-decoration-line: underline;
+    }
+    .flexbox3>.box2>.words>.icon 
+    {
+        font-size: 17px;
+        margin: 10px 8px;
+    }
+    .flexbox3>.box2>a>img,.flexbox3>.box3>a>img
+    {
+        width: 320px;
+    }
+    .flexbox3>.box1,.flexbox3>.box2,.flexbox3>.box3
+    {
+        margin-top: 10px;
+    }
+    .footer
+    {
+        height: auto;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.677);
+        color: white;
+    }
+    .footer>.footer1>.value1>p>a 
+    {
+        text-decoration: none;
+        color: white;
+    }
+    .footer>.footer1>.value1>p>a:hover
+    {
+        text-decoration-line: underline;
+    }
+    .footer>.footer1>.value1>p>a>i
+    {
+        padding-right: 8px;
+    }
+    .footer>.footer1
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+    }
+    .footer>.footer1>.value1
+    {
+        margin-right:80px ;
+    }
+    .ad
+    {
+        height: auto;
+        width: auto;
+        text-align: center;
+    }
+    .top
+    {
+        position: fixed;
+        padding: 8px 40px;
+        color: white;
+        background-color:rgba(0, 0, 0, 0.677);
+        border-radius: 20px;
+        top:650px;
+        left: 44vw;
+    }
+    </style>
+</head>
+<body>
+    <div class="ad" id="ad1"><a href=""><img src="https://tpc.googlesyndication.com/simgad/15095632722274284605"  alt="Image not found."></a></div>
+    <div class="top">
+      <a href="#ad1" style="text-decoration: none;color: white;">Move to top<span ><i class="bi bi-arrow-up" style="font-size: 20px;"></i></span></a>  
+    </div>
+<div class="section1" id="section">
+    <div class="nav">
+        <div class="sub1"><a href="#section"><img src="image/cricbuzz.jpg"  alt="Image not found." style="height: 30px;width:110px;"></a></div>
+        <div class="sub2">
+        <a href="">LiveScores</a>
+        <a href="">Schedule</a>
+        <a href="">Archives</a>
+        <a href="">News<i class="bi bi-caret-down-fill"></i></a>
+        <a href="">Series<i class="bi bi-caret-down-fill"></i></a>
+        <a href="">Teams<i class="bi bi-caret-down-fill"></i></a>
+        <a href="">Videos<i class="bi bi-caret-down-fill"></i></a>
+        <a href="">Rankings<i class="bi bi-caret-down-fill"></i></a>
+        <a href="">More<i class="bi bi-caret-down-fill"></i></a>
+        <a href="" style="background-color: white;color: black;border-radius: 20px;padding: 5px 25px;">Cricbuzz Plus</a>
+    </div>
+    <div class="sub3"><a href=""><i class="bi bi-person-circle" style="color: white;font-size:20px;"></i></a></div>
+    </div>
+    <div class="nav1">
+        <div class="sub4">
+        <a href="" style="background-color: black;padding: 10px 10px;">MATCHES</a>
+        <a href="">SYS VS PRE - Preview</a>
+        <a href="">ALK VS NK - Live</a>
+        <a href="">MIE vs DCP - Preview</a>
+        <a href="">MICT vs PR - Preview</a>
+        <a href="">INDW - IREW...</a>
+    </div>
+    <div class="sub5" style="margin-right: 30px;">
+        <a href="" style="text-decoration: none;color: white;">ALL<i class="bi bi-caret-down-fill" style="color: white;"></i></a>
+    </div>
+    </div>
+    <!-------------------------------------------------nav bars---------------------------------------------->
+    <div class="boxes">
+        <div class="box1">
+            <div class="match">
+                33rd Match.Big Bash League 2024-25
+                <div class="type" style="color: white;background-color: black;border-radius: 5px;padding: 2px 6px;">
+                    T20
+                </div>
+            </div>
+            <div style="padding: 5px 10px;font-size: 14px;">
+                <span>Sydney Thunder</span><span style="padding-left:30%;">0-0(0.0)</span><br>
+                <span>Perth Scorchers</span><span style="padding-left: 30%;">0-0(0.0)</span>
+            </div>
+            <div class="time">
+                    Today, 2:00 PM
+            </div>
+            <div class="bottom">
+                <a href="">FANTASY</a>
+                <a href="">TABLE</a>
+                <a href="">SCHEDULE</a>
+            </div>
+        </div>
+        <div class="box1">
+            <div class="match">
+                13th Match.Super Smash 2024-25
+                <div class="type" style="color: white;background-color: black;border-radius: 5px;padding: 2px 6px;">
+                    T20
+                </div>
+            </div>
+            <div style="padding: 5px 10px;font-size: 14px;">
+                <span>AKL</span><span style="padding-left:30%;">187-5(20)</span><br>
+                <span style="font-weight: bold;">NK</span><span style="padding-left: 30%;font-weight: bold;">18-1(1.3)</span>
+            </div>
+            <div class="time">
+                    Northern Knights need 170 runs to win.
+            </div>
+            <div class="bottom">
+                <a href="">FANTASY</a>
+                <a href="">TABLE</a>
+                <a href="">SCHEDULE</a>
+            </div>
+        </div>
+        <div class="box1">
+            <div class="match">
+                4th Match.International League 2024-25
+                <div class="type" style="color: white;background-color: black;border-radius: 5px;padding: 2px 6px;">
+                    T20
+                </div>
+            </div>
+            <div style="padding: 5px 10px;font-size: 14px;">
+                <span>MI Emirates</span><span style="padding-left:30%;">0-0(0.0)</span><br>
+                <span>Dubai Capitals</span><span style="padding-left: 30%;">0-0(0.0)</span>
+            </div>
+            <div class="time">
+                    Today, 8:00 PM
+            </div>
+            <div class="bottom">
+                <a href="">FANTASY</a>
+                <a href="">TABLE</a>
+                <a href="">SCHEDULE</a>
+            </div>
+        </div>
+        <div class="box1">
+            <div class="match">
+                6th Match.SA T20 League 2024-25
+                <div class="type" style="color: white;background-color: black;border-radius: 5px;padding: 2px 6px;">
+                    T20
+                </div>
+            </div>
+            <div style="padding: 5px 10px;font-size: 14px;">
+                <span>MI CapeTown</span><span style="padding-left:30%;">0-0(0.0)</span><br>
+                <span>Paarl Royals</span><span style="padding-left: 30%;">0-0(0.0)</span>
+            </div>
+            <div class="time">
+                    Today, 9:00 PM
+            </div>
+            <div class="bottom">
+                <a href="">FANTASY</a>
+                <a href="">TABLE</a>
+                <a href="">SCHEDULE</a>
+            </div>
+        </div>
+    </div>
+    <div class="nav3">
+        <div style="font-weight: bold;padding-left: 10px;">Quick Access</div>
+        <div><a href=""><i class="bi bi-trophy"></i>BGT 2024-25</a></div>
+        <div><a href=""><i class="bi bi-trophy"></i>Fantasy Handbook</a></div>
+        <div><a href><i class="bi bi-patch-check"></i>See Plans</a></div>
+        <div><a href=""><i class="bi bi-people-fill"></i>Team India</a></div>
+        <div><a href=""><i class="bi bi-plus"></i>Cricbuzz Plus</a></div>
+        <div><a href=""><i class="bi bi-patch-check"></i>CB Plus & Team</a></div>
+
+    </div>
+    <div class="flexes">
+        <div class="flexboxes">
+        <div class="flexbox1">
+            <div class="flex1">
+            <span style="color: rgb(0, 139, 104);font-weight: bold;font-size: 20px;">LATEST NEWS</span>
+            <p><a href="" style="text-decoration: none;color: black;">Sobhana Mostary key for <br>
+                          Bangladesh in quest for <br>
+                          direct WC qualification</a></p>
+            <span>13h ago</span>
+            </div>
+            <div class="flex1">
+                <p><a href="" style="text-decoration: none;color: black;">Nortje, Ngidi included in <br>
+                     South Africa's Champions <br>
+                     Trophy squad </a></p>
+                <span>20h ago</span>
+                </div>
+                <div class="flex1">
+                    <p><a href="" style="text-decoration: none;color: black;">Saikia and Bhatia officially <br>
+                         named BCCI secretary, <br>
+                         treasurer </a></p>
+                    <span>20h ago</span>
+                    </div>
+                    <div class="flex1">
+                        <p><a href="" style="text-decoration: none;color: black;">Australia include Cummins, <br>
+                            Hazlewood in Champions <br>
+                            Trophy preliminary squad</a></p>
+                        <span>1d ago</span>
+                        </div>
+                        <div class="flex1">
+                            <p><a href="" style="text-decoration: none;color: black;">There is nothing to prove <br>
+                                to anyone - Litton Das</a></p>
+                            <span>1d ago</span>
+                            </div>
+                            <div class="flex1">
+                                <p><a href="" style="text-decoration: none;color: black;">IPL 2025 to kick off on <br>
+                                    March 21 in Kolkata</a></p>
+                                <span>1d ago</span>
+                                </div>
+                                <div class="flex1">
+                                    <p><a href="" style="text-decoration: none;color: black;">Shreyas Iyer named <br>
+                                        Punjab Kings captain <br>
+                                        for IPL 2025</a></p>
+                                    <span>1d ago</span>
+                                    </div>
+                                    <div class="flex1">
+                                        <p><a href="" style="text-decoration: none;color: black;">'It was a long awaited one' <br> 
+                                            - Jemimah Rodrigues on <br>
+                                            maiden ton</a></p>
+                                        <span>1d ago</span>
+                                        </div>
+                                        <div class="flex1">
+                                            <p><a href="" style="text-decoration: none;color: black;">Fit-again Ibrahim Zadran <br>
+                                                picked for Champions <br>
+                                                Trophy</a></p>
+                                            <span>1d ago</span>
+                                            </div>
+                                            <div class="flex1">
+                                                <p><a href="" style="text-decoration: none;color: black;">Bangladesh leave out <br>
+                                                    Litton Das for <br>
+                                                    Champions Trophy</a></p>
+                                                <span>1d ago</span>
+                                                <div class="more"><a href="" style="text-decoration: none;color: rgb(18, 142, 199);">More news</a></div>
+                                                </div>
+        </div>
+        <div class="flexbox1">
+            <div class="flex1">
+                <span style="color:rgb(0, 139, 104);font-weight: bold;font-size: 20px;">LATEST PHOTOS</span>
+                <a href=""><img src="https://static.cricbuzz.com/a/img/v1/165x95/i1/c596924/australia-vs-india-5th-test.jpg" alt="" style="height: 120px; width: 95%;padding-top: 5px;border-radius:8px;"></a>
+                <p style="margin-bottom: -10px;margin-top: -3px;"><a href="" style="text-decoration: none;color: black;">Australia vs India, <br>
+                    5th Test, Day 3 </a></p> <br>
+                <span style="color: grey;">Sun, Jan 05 2025</span>
+                </div>
+                <div class="flex1">
+                    <a href=""><img src="https://static.cricbuzz.com/a/img/v1/165x95/i1/c595193/australia-vs-india-5th-test.jpg" alt="" style="height: 120px; width: 95%;padding-top: 5px;border-radius:8px;"></a>
+                    <p style="margin-bottom: -10px;margin-top: -3px;"><a href="" style="text-decoration: none;color: black;">Australia vs India, <br>
+                        5th Test, Day 1</a></p> <br>
+                    <span style="color: grey;">Fri, Jan 03 2025</span>
+                    </div>
+                    <div class="flex1">
+                        <a href=""><img src="https://static.cricbuzz.com/a/img/v1/165x95/i1/c593754/australia-vs-india-4th-test.jpg" alt="" style="height: 120px; width: 95%;padding-top: 5px;border-radius:8px;"></a>
+                        <p style="margin-bottom: -10px;margin-top: -3px;"><a href="" style="text-decoration: none;color: black;">Australia vs India, <br>
+                            4th Test, Day 5</a></p> <br>
+                        <span style="color: grey;">Mon, Dec 30 2024</span>
+                        </div>
+                        <div class="flex1">
+                            <a href=""><img src="https://static.cricbuzz.com/a/img/v1/165x95/i1/c593294/australia-vs-india-4th-test.jpg" alt="" style="height: 120px; width: 95%;padding-top: 5px;border-radius:8px;"></a>
+                            <p style="margin-bottom: -10px;margin-top: -3px;"><a href="" style="text-decoration: none;color: black;">Australia vs India, <br>
+                                4th Test, Day 4</a></p> <br>
+                            <span style="color: grey;">Sun, Dec 29 2024</span>
+                            </div>
+                            <div class="flex1">
+                                <a href=""><img src="https://static.cricbuzz.com/a/img/v1/165x95/i1/c592233/australia-vs-india-4th-test.jpg" alt="" style="height: 120px; width: 95%;padding-top: 5px;border-radius:8px;"></a>
+                                <p style="margin-bottom: -10px;margin-top: -3px;"><a href="" style="text-decoration: none;color: black;">Australia vs India, <br>
+                                    4th Test, Day 3</a></p> <br>
+                                <span style="color: grey;">Sat, Dec 28 2024</span>
+                                </div>
+                                <div class="flex1">
+                                    <a href=""><img src="https://static.cricbuzz.com/a/img/v1/165x95/i1/c591641/australia-vs-india-4th-test.jpg" alt="" style="height: 120px; width: 95%;padding-top: 5px;border-radius:8px;"></a>
+                                    <p style="margin-bottom: -10px;margin-top: -3px;"><a href="" style="text-decoration: none;color: black;">Australia vs India, <br>
+                                        4th Test, Day 2</a></p> <br>
+                                    <span style="color: grey;">Fri, Dec 27 2024</span> <br>
+                                    <div class="more"><a href="" style="text-decoration: none;color: rgb(18, 142, 199);">More photos</a></div>
+                                    </div>
+        </div>
+        <div class="flexbox1">
+            <div class="flex1">
+                <span style="color:rgb(0, 139, 104);font-weight: bold;font-size: 20px;">SCHEDULE</span>
+                <div style="padding: 8px 0px;">Pakistan vs West Indies, <br>
+                    1st Test, Day 1</div>
+                <span style="color: grey;font-size: 14px;">Fri Jan 17 • 10:00 AM GMT</span>
+                </div>
+                <div class="flex1">
+                    <div style="padding: 8px 0px;">Pakistan vs West Indies, <br>
+                        1st Test, Day 2</div>
+                    <span style="color: grey;font-size: 14px;">Sat Jan 18 • 10:00 AM GMT</span>
+                    </div>
+                    <div class="flex1">
+                        <div style="padding: 8px 0px;">Pakistan vs West Indies, <br>
+                            1st Test, Day 3</div>
+                        <span style="color: grey;font-size: 14px;">Sun Jan 19 • 10:00 AM GMT</span>
+                        </div>
+                                <div class="flex1">
+                                    <div style="padding: 8px 0px;">Pakistan vs West Indies, <br>
+                                        1st Test, Day 4</div>
+                                    <span style="color: grey;font-size: 14px;">Mon Jan 20 • 10:00 AM GMT</span>
+                                    </div>
+                                    <div class="flex1">
+                                        <div style="padding: 8px 0px;">Pakistan vs West Indies, <br>
+                                            1st Test, Day 5</div>
+                                        <span style="color: grey;font-size: 14px;">Tue Jan 21 • 10:00 AM GMT</span>
+                                        </div>
+                                        <div class="flex1">
+                                            <div style="padding: 8px 0px;">India vs England, 1st T20I</div>
+                                            <span style="color: grey;font-size: 14px;">Wed Jan 22 • 7:00 PM GMT</span>
+                                            </div>
+                                            <div class="flex1">
+                                                <div style="padding: 8px 0px;">India vs England, <br>
+                                                    2nd T20I</div>
+                                                <span style="color: grey;font-size: 14px;">Sat Jan 25 • 7:00 PM GMT</span>
+                                                </div>
+                                                <div class="flex1">
+                                                    <div style="padding: 8px 0px;">Pakistan vs West Indies, <br>
+                                                        2nd Test, Day 1</div>
+                                                    <span style="color: grey;font-size: 14px;">Sat Jan 25 • 10:00 AM GMT</span>
+                                                    </div>
+                                                <div class="flex1">
+                                                    <div style="padding: 8px 0px;">Pakistan vs West Indies, <br>
+                                                        2nd Test, Day 2</div>
+                                                    <span style="color: grey;font-size: 14px;">Sun Jan 26 • 10:00 AM GMT</span>
+                                                    </div>
+                                                    <div class="flex1">
+                                                        <div style="padding: 8px 0px;">Pakistan vs West Indies, <br>
+                                                            2nd Test, Day 3</div>
+                                                        <span style="color: grey;font-size: 14px;">Mon Jan 27 • 10:00 AM GMT</span>
+                                                        </div>  
+                                                                <div class="flex1">
+                                                                    <div style="padding: 8px 0px;">Pakistan vs West Indies, <br>
+                                                                        2nd Test, Day 4</div>
+                                                                    <span style="color: grey;font-size: 14px;">Tues Jan 28 • 10:00 AM GMT</span>
+                                                                    </div>
+                                                                    <div class="flex1">
+                                                                        <div style="padding: 8px 0px;">Pakistan vs West Indies, <br>
+                                                                            2nd Test, Day 5</div>
+                                                                        <span style="color: grey;font-size: 14px;">Wed Jan 29 • 10:00 AM GMT</span>
+                                                                        </div>
+                                                                    <div class="flex1">
+                                                                        <div style="padding: 8px 0px;">Sri Lanka vs Australia, 
+                                                                            1st Test, Day 1<br></div>
+                                                                        <span style="color: grey;font-size: 14px;">Wed Jan 29 • 10:00 AM GMT</span>
+                                                                        </div>
+                                            
+        </div>
+    </div>
+    <div class="flexbox2">
+        <div class="box1">
+            <div>IPL 2025</div>
+            <a href=""><img src="https://static.cricbuzz.com/a/img/v1/420x235/i1/c599375/ipl-2025-to-kick-off-on-march.jpg" alt="" style="border-radius: 8px;"></a>
+            <div class="text" style="font-weight: bold;font-size: 25px;"><a href="" style="text-decoration: none;color: black;">IPL 2025 to kick off on March 21 in <br>
+                Kolkata</a></div>
+                <div style="color: grey;font-size: 15px;">The final is also scheduled to be held in Kolkata while Hyderabad is <br>
+                    expected to host two playoff games</div>
+        </div>
+        <div class="box1">
+            <div>INDIAN PREMIER LEAGUE</div>
+            <a href=""><img src="https://static.cricbuzz.com/a/img/v1/420x235/i1/c599374/shreyas-iyer-named-punjab-king.jpg" alt="" style="border-radius: 8px;"></a>
+            <div class="text" style="font-weight: bold;font-size: 25px;"><a href="" style="text-decoration: none;color: black;">Shreyas Iyer named Punjab Kings<br>
+                captain for IPL 2025</a></div>
+                <div style="color: grey;font-size: 15px;">The title-winning skipper of IPL 2024 was the second biggest buy in <br>
+                    the auction ahead of the 2025 edition</div>
+        </div>
+        <div class="box1">
+            <div>ENGLAND TOUR OF INDIA, 2025</div>
+            <a href=""><img src="https://static.cricbuzz.com/a/img/v1/420x235/i1/c599035/shami-makes-much-awaited-retur.jpg" alt="" style="border-radius: 8px;"></a>
+            <div class="text" style="font-weight: bold;font-size: 25px;"><a href="" style="text-decoration: none;color: black;">Shami makes much-awaited return, <br>
+                 picked for England T20Is</a></div>
+                <div style="color: grey;font-size: 15px;">Axar Patel named vice-captain, Dhruv Jurel picked as second keeper</div>
+                <div class="text"><a href="" style="text-decoration: none;color:rgb(18, 142, 199);font-weight: bold;">Announcement of India's CT 2025 squad maybe delayed</a></div>
+        </div>
+        <div class="box1">
+            <div>CHAMPIONS TROPHY 2025</div>
+            <a href=""><img src="https://static.cricbuzz.com/a/img/v1/420x235/i1/c599378/australia-include-cummins-haz.jpg" alt="" style="border-radius: 8px;"></a>
+            <div class="text" style="font-weight: bold;font-size: 25px;"><a href="" style="text-decoration: none;color: black;">Australia include Cummins, <br>
+                 Hazlewood in Champions Trophy <br>
+                 preliminary squad</a></div>
+                <div style="color: grey;font-size: 15px;">The Australian squad can be amended until the commencement <br>
+                     of the tournament</div>
+                <div class="text"><a href="" style="text-decoration: none;color:rgb(18, 142, 199);font-weight: bold;">New Zealand pick Ben Sears, Will O'Rourke for Champions<br>
+                    Trophy</a></div>
+                     <div class="text"><a href="" style="text-decoration: none;color:rgb(18, 142, 199);font-weight: bold;">Nortje, Ngidi included in South Africa's Champions Trophy<br>
+                    squad</a></div>
+        </div>
+        <div class="box1">
+            <div>NEWS IN SHORTS</div>
+            <a href=""><img src="https://static.cricbuzz.com/a/img/v1/420x235/i1/c599529/anderson-signs-one-year-contra.jpg" alt="" style="border-radius: 8px;"></a>
+            <div class="text" style="font-weight: bold;font-size: 25px;"><a href="" style="text-decoration: none;color: black;">Anderson signs one-year contract <br>
+                with Lancashire</a></div>
+                <div style="color: grey;font-size: 15px;">News bytes that you may have missed otherwise</div>
+        </div>
+        <div class="box1">
+            <div>BBL 2024-25</div>
+            <a href=""><img src="https://static.cricbuzz.com/a/img/v1/420x235/i1/c599524/thunder-demolish-scorchers-to.jpg" alt="" style="border-radius: 8px;"></a>
+            <div class="text" style="font-weight: bold;font-size: 25px;"><a href="" style="text-decoration: none;color: black;">Thunder demolish Scorchers to move<br>
+                to the top of the table</a></div>
+                <div style="color: grey;font-size: 15px;">Scorchers have suffered their fourth successive <br>
+                    loss and are now at the bottom of the BBL 2024-25 table</div>
+        </div>
+        <div class="box1">
+            <div>IRELAND WOMEN TOUR OF INDIA WOMEN, 2025</div>
+            <a href=""><img src="https://static.cricbuzz.com/a/img/v1/420x235/i1/c599369/rodrigues-maiden-ton-leads-se.jpg" alt="" style="border-radius: 8px;"></a>
+            <div class="text" style="font-weight: bold;font-size: 25px;"><a href="" style="text-decoration: none;color: black;">Rodrigues' maiden ton leads series-<br>
+                clinching rout</a></div>
+                <div style="color: grey;font-size: 15px;">India clinched a comfortable 116-run win after posting their highest <br>
+                 ODI total of 370/5</div>
+                 <div class="text"><a href="" style="text-decoration: none;color:rgb(18, 142, 199);font-weight: bold;"><b style="color: red;">Stats / </b>India Women register their highest ODI total</a></div>
+                     <div class="text"><a href="" style="text-decoration: none;color:rgb(18, 142, 199);font-weight: bold;">'It was a long awaited one'</a></div>
+        </div>
+        <div class="box1">
+            <div>CHAMPIONS TROPHY 2025</div>
+            <a href=""><img src="https://static.cricbuzz.com/a/img/v1/420x235/i1/c599224/bangladesh-leave-out-litton-da.jpg" alt="" style="border-radius: 8px;"></a>
+            <div class="text" style="font-weight: bold;font-size: 25px;"><a href="" style="text-decoration: none;color: black;">Bangladesh leave out Litton Das for <br>
+                Champions Trophy</a></div>
+                <div style="color: grey;font-size: 15px;">The quartet of Najmul Hossain Shanto, Mushfiqur Rahim, Towhid <br>
+                    Hridoy and Mustafizur Rahman return; no Shakib after all-rounder <br>
+                    failed bowling assessment test</div>
+                    <div class="text"><a href="" style="text-decoration: none;color:rgb(18, 142, 199);font-weight: bold;">Shakib fails reassessment test for bowling action in Chennai</a></div>
+                         <div class="text"><a href="" style="text-decoration: none;color:rgb(18, 142, 199);font-weight: bold;">Fit-again Ibrahim Zadran picked for Champions Trophy</a></div>
+                        <div class="text"><a href="" style="text-decoration: none;color:rgb(18, 142, 199);font-weight: bold;">There is nothing to prove to anyone - Litton Das</a></div>
+                             
+        </div>
+        <div class="box1">
+            <div>SA20, 2025</div>
+            <a href=""><img src="https://static.cricbuzz.com/a/img/v1/420x235/i1/c599682/reeza-van-der-dussen-star-in.jpg" alt="" style="border-radius: 8px;"></a>
+            <div class="text" style="font-weight: bold;font-size: 25px;"><a href="" style="text-decoration: none;color: black;">Reeza, van der Dussen star in MI <br>
+                Cape Town's easy win</a></div>
+                <div style="color: grey;font-size: 15px;">Kagiso Rabada's 4-2-22-2 tied down Paarl Royals early in the <br>
+                    chase</div>
+                <div class="text"><a href="" style="text-decoration: none;color:rgb(18, 142, 199);font-weight: bold;">Walter looks to correct SA's recent white-ball record in CT</a></div>
+                         <div class="text"><a href="" style="text-decoration: none;color:rgb(18, 142, 199);font-weight: bold;">Remember the name: Lhuan-Dre Pretorius</a></div>
+                        <div class="text"><a href="" style="text-decoration: none;color:rgb(18, 142, 199);font-weight: bold;">When Kwena met Karthik, and the generational baton <br>
+                            changed hands</a></div>
+        </div>
+        <div class="box1">
+            <div>BBl 2024-25</div>
+            <a href=""><img src="https://static.cricbuzz.com/a/img/v1/420x235/i1/c599837/bethell-87-in-vain-as-hurrican.jpg" alt="" style="border-radius: 8px;"></a>
+            <div class="text" style="font-weight: bold;font-size: 25px;"><a href="" style="text-decoration: none;color: black;">Bethell 87 in vain as Hurricanes <br>
+                 continue their dominance</a></div>
+                <div style="color: grey;font-size: 15px;">Meanwhile, Melbourne Renegades have been pushed to last on <br>
+                    the points table and are out of reckoning for a playoffs spot</div>
+        </div>
+        <div class="box1">
+            <div>ILT20</div>
+            <a href=""><img src="https://static.cricbuzz.com/a/img/v1/420x235/i1/c599683/mi-emirates-register-first-win.jpg" alt="" style="border-radius: 8px;"></a>
+            <div class="text" style="font-weight: bold;font-size: 25px;"><a href="" style="text-decoration: none;color: black;">MI Emirates register first win <br>
+                despite Hope's century</a></div>
+                <div style="color: grey;font-size: 15px;">All the news and reports from the third season of ILT20</div>
+        </div>
+    </div>
+    <div class="flexbox3">
+        <div class="box1">
+            <a href=""><img src="https://tpc.googlesyndication.com/simgad/8361988842864541492" alt="" style="border-radius:8px;"></a>
+        </div>
+        <div class="box2">
+            <span style="color:rgb(0, 139, 104);font-weight: bold;font-size: 20px;">FEATRED VIDEOS</span> <br>
+            <a href=""><img src="https://static.cricbuzz.com/a/img/v1/290x164/i1/c599687/axar-patel-named-t20i-vice-cap.jpg" alt=""></a>
+            <div class="words">
+                <div class="icon"><i class="bi bi-caret-right-fill"></i></div>
+                <div class="text"> <a href="" class="text1">Axar Patel|named T20 vice-captain <br>
+                    vs England|Will he deliver?</a></div>
+            </div>
+        </div>
+        <div class="box2">
+            <a href=""><img src="https://static.cricbuzz.com/a/img/v1/290x164/i1/c599432/ind-v-eng-opportunity-beckons.jpg" alt=""></a>
+            <div class="words">
+                <div class="icon"><i class="bi bi-caret-right-fill"></i></div>
+                <div class="text"> <a href="" class="text1">IND-ENG opportunity backons ft-</a><br>
+                    Nitish Reddy,Varun Chakravarthy</a></div>
+            </div>
+        </div>
+        <div class="box2">
+            <a href=""><img src="https://static.cricbuzz.com/a/img/v1/290x164/i1/c597096/is-gambhir-facing-the-heat-ha.jpg" alt=""></a>
+            <div class="words">
+                <div class="icon"><i class="bi bi-caret-right-fill"></i></div>
+                <div class="text"> <a href="" class="text1">Is Gautam Gambhir facing the heat?<br>
+                    Harsha Bhogle & Dinesh Karthik ans</a></div>
+            </div>
+        </div>
+        <div class="box3">
+            <span style="color:rgb(0, 139, 104);font-weight: bold;font-size: 20px;">SPECIALS</span> <br>
+            <a href=""><img src="https://static.cricbuzz.com/a/img/v1/300x170/i1/c599529/james-anderson-had-first-playe.jpg" alt="" style="border-radius: 8px;"></a>
+            <div class="text" style="font-weight: bold;font-size: 15px;"><a href="" style="text-decoration: none;color: black;">January 2025-news digest</a></div>
+                <div style="color: grey;font-size: 15px;">News bytes that you may have missed otherwise</div>
+        </div>
+        <div class="box3">
+            <a href=""><img src="https://static.cricbuzz.com/a/img/v1/300x170/i1/c592595/seeing-nitsh-play-for-india-on.jpg" alt="" style="border-radius: 8px;"></a>
+            <div class="text" style="font-weight: bold;font-size: 15px;"><a href="" style="text-decoration: none;color: black;">Sacrifice over showcase: Behind Nitish <br>
+                Reddy's journey to India colours</a></div>
+                <div style="color: grey;font-size: 15px;">The all-rounder's rise to the top is defined by <br>
+                    more than just accolades. His journey is a <br>
+                    testament to sacrifice and dedication, shaped <br>
+                    by his father's tough decisions and his family's <br>
+                    quiet resilience</div>
+        </div>
+        <div class="box3">
+            <a href=""><img src="https://static.cricbuzz.com/a/img/v1/300x170/i1/c581396/ben-stokes-place-in-a-lineage.jpg" alt="" style="border-radius: 8px;"></a>
+            <div class="text" style="font-weight: bold;font-size: 15px;"><a href="" style="text-decoration: none;color: black;">Ben Stokes sees the finishing line</a></div>
+                <div style="color: grey;font-size: 15px;">Ben Stokes' place in a lineage of romanticised <br>
+                    English talismans is secure, but the final <br>
+                    acts in his international career still have <br>
+                     the opportunity to define him</div>
+        </div>
+        <div class="box3">
+            <a href=""><img src="https://static.cricbuzz.com/a/img/v1/300x170/i1/c582431/one-thing-that-we-spoke-about.jpg" alt="" style="border-radius: 8px;"></a>
+            <div class="text" style="font-weight: bold;font-size: 15px;"><a href="" style="text-decoration: none;color: black;">Breaching Bastions: Young and the <br>
+                extraordinary</a></div>
+                <div style="color: grey;font-size: 15px;">In an exclusive interview, the Player of the <br>
+                     Series in New Zealand's greatest Test series <br>
+                      triumph reflects on the toils and tactics <br>
+                      that got him here</div>
+        </div>
+        <div class="box3">
+            <a href=""><img src="https://static.cricbuzz.com/a/img/v1/300x170/i1/c556010/root-surpassed-cook-to-become.jpg" alt="" style="border-radius: 8px;"></a>
+            <div class="text" style="font-weight: bold;font-size: 15px;"><a href="" style="text-decoration: none;color: black;">Joe Root - England's Numero Uno</a></div>
+                <div style="color: grey;font-size: 15px;">Several batting records tumbled on Day 3 of the <br>
+                     Multan Test where Root surpassed Cook to <br>
+                     become England's highest Test run getter</div>
+        </div>
+        <div class="box3">
+            <a href=""><img src="https://static.cricbuzz.com/a/img/v1/300x170/i1/c509959/hardik-pandya-took-an-indian-f.jpg" alt="" style="border-radius: 8px;"></a>
+            <div class="text" style="font-weight: bold;font-size: 15px;"><a href="" style="text-decoration: none;color: black;">India's World Cup win wasn't a feeling <br>
+            it's an emotion.</a></div>
+                <div style="color: grey;font-size: 15px;">It was the kind of emotion that cannot easily <br>
+                    be explained. There was pure joy for sure.But there <br>
+                    was also relief, and that bit of unexplained mania.</div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="footer">
+    <div class="footer1">
+        <div class="value1">
+            <h4><a href="#ad1" style="text-decoration: none;color: white;"><img src="image/cricbuzzblack.jpg"  alt="Image not found."></a></h4>
+        </div>
+        <div class="value1">
+            <h4>MOBILE SITE & APPS</h4>
+            <p><a href=""><i class="bi bi-browser-chrome"></i>m.cricbuzz.com</a><br>
+                <a href=""><i class="bi bi-android2"></i>Android </a><br>
+            <a href=""><i class="bi bi-apple"></i>iOS </a><br></p>
+        </div>
+        <div class="value1">
+            <h4>FOLLOW US ON</h4>
+            <p><a href=""><i class="bi bi-facebook"></i>facebook </a><br>
+                <a href=""><i class="bi bi-twitter"></i>twitter</a> <br>
+                <a href=""><i class="bi bi-youtube"></i>youtube</a><br>
+                <a href=""><i class="bi bi-pinterest"></i>Pinterest</a>
+            </p>
+        </div>
+        <div class="value1">
+            <h4>COMPANY</h4>
+            <p>
+                <a href="">Careers</a> <br>
+                <a href="">Advertise</a> <br>
+                <a href="">Privacy Policy</a> <br>
+                <a href="">Terms of use</a> <br>
+                <a href="">Cricbuzz TV Ads</a>
+            </p>
+        </div>
+    </div>
+    <div style="text-align: center;padding: 50px;">
+        © 2025 Cricbuzz.com, Times Internet Limited. All rights reserved | The Times of India | Navbharat Times
+    </div>
+</div>
+</body>
+</html>
